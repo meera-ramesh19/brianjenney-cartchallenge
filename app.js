@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
          quantityEl.innerText = quantity + 1;
         let productTotalQuantity = product.price * quantity;
         totalAmount += product.price;
-        totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
+        // totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
 
         // Update the cart data in localStorage
         let cartProduct = store.find((item) => item.id === product.id);
@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
           quantityEl.innerText = quantity - 1;
           let productTotalQuantity = product.price * quantity;
           totalAmount -= product.price;
-          totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
+        //   totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
         
            // Update the cart data in localStorage
             let cartProduct = store.find((item) => item.id === product.id);
