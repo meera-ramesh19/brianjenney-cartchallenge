@@ -131,3 +131,16 @@ html, body {
   padding:20px 0;
 }
 .is-hidden { display: none; }
+.image{
+  position:relative;
+  width:35px;
+  height:35px;
+  top:10px;
+}
+.cartAmount{
+  position:absolute;
+  font-size: 1.2em;
+  top:12px;
+  right:420px;
+  color:white;
+  }
