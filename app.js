@@ -50,10 +50,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       let createAddDeleteDiv = document.createElement('div');
       createAddDeleteDiv.className = 'card-addDelete';
-      createAddDeleteDiv.style.margin = 'auto';
       createAddDeleteDiv.style.padding = '5px';
       createAddDeleteDiv.style.display = 'flex';
-      createAddDeleteDiv.style.textAlign = 'center';
+      createAddDeleteDiv.style.justifyContent = 'center';
+      createAddDeleteDiv.style.alignItems = 'center';
       card.appendChild(createAddDeleteDiv);
 
 
@@ -65,6 +65,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       decrementBtn.style.width = '25px';
       decrementBtn.style.height = '25px';
       decrementBtn.innerText='-';
+      decrementBtn.style.textAlign = 'center';
       createAddDeleteDiv.appendChild(decrementBtn);
 
     
@@ -95,19 +96,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
       createButton.className = 'card-addtoCart';
       createButton.setAttribute('id', 'buyBtn');
       createButton.innerText = 'Buy';
-      createButton.style.margin = '5px';
+      createButton.style.margin = '20px auto';
       createButton.style.padding = '5px';
       card.appendChild(createButton);
-
-    
-    //   const incrementBtn = card.querySelector('.increment');
-    //   const decrementBtn = card.querySelector('.decrement');
-    //   const numberOfItems = card.querySelector('.card-addDelete button');
       
       incrementBtn.addEventListener('click', () => {
         let quantity = parseInt(quantityEl.innerText);
          quantityEl.innerText = quantity + 1;
-        let productTotalQuantity = product.price * quantity;
+        // let productTotalQuantity = product.price * quantity;
         totalAmount += product.price;
         // totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
 
@@ -128,7 +124,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let quantity = parseInt(quantityEl.innerText);
         if (quantity > 0) {
           quantityEl.innerText = quantity - 1;
-          let productTotalQuantity = product.price * quantity;
+        //   let productTotalQuantity = product.price * quantity;
           totalAmount -= product.price;
         //   totalAmountEl.innerHTML = `$${totalAmount.toFixed(2)}`;
         
